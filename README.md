@@ -13,3 +13,7 @@ Convert to webp format or optimize with lazy loading
 ### Login Modal 🔑
 
 Use modal, and firebase auth
+
+### Responsive Design 🎈
+
+Use media query for css for responsive design
