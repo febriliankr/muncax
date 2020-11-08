@@ -1,0 +1,19 @@
+.searchbar__container {
+  width: 400px;
+  margin: 20px auto 0;
+  color: black;
+  //   background-color: rgba(255, 0, 0, 0.233);
+//   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover{
+    box-shadow: 0px 0px 15px 0px rgba(11, 75, 172, 0.25);
+  }
+  div {
+    div {
+      cursor: pointer;
+    }
+    .css-1okebmr-indicatorSeparator{
+        display: none;
+    }
+  }
+}
