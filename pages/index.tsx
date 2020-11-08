@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>M</title>
+        <title>Sewa Peralatan Gunung</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
