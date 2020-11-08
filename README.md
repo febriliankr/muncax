@@ -17,3 +17,12 @@ Use modal, and firebase auth
 ### Responsive Design 🎈
 
 Use media query for css for responsive design
+
+## Dependencies 🎃
+
+Language: [Typescript](https://www.typescriptlang.org/) --dev
+Library: React.js v17.0.1
+Framework: Next.js
+Styling: [Sass](https://sass-lang.com/) --dev
+Netlify Config: next-on-netlify
+Search Bar: [react-select](https://react-select.com)
