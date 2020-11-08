@@ -1,6 +1,5 @@
 import Head from "next/head";
 import SearchBar from "../components/SearchBar";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -19,25 +18,11 @@ export default function Home() {
             <h2>Cari penyewa terdekat, termurah</h2>
             <p>Pilih dari puluhan penyewa yang ada di dekat anda.</p>
           </div>
-          <div className="hero__image">
-            <Image
-              src="/backpacker-2.jpg"
-              alt="gunung"
-              width={500}
-              height={300}
-            />
-          </div>
+
+          <img className="hero__image" src="/backpacker-2.jpg" alt="gunung" />
         </div>
         <div className="hero">
-          <div className="hero__image">
-            <Image
-              className="hero__image"
-              src="/backpacker.jpg"
-              alt="gunung"
-              width={500}
-              height={400}
-            />
-          </div>
+          <img className="hero__image" src="/backpacker-1.jpg" alt="gunung" />
           <div className="hero__text">
             <h2>Pinjamkan gear naik gunung anda</h2>
             <p>Punya carrier atau tenda tidak terpakai? Sewakan di sini</p>
