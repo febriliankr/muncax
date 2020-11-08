@@ -19,10 +19,10 @@ export default function Home() {
             <p>Pilih dari puluhan penyewa yang ada di dekat anda.</p>
           </div>
 
-          <img className="hero__image" src="/backpacker-2.jpg" alt="gunung" />
+          <img className="hero__image" src="/backpacker-2.webp" alt="gunung" />
         </div>
         <div className="hero">
-          <img className="hero__image" src="/backpacker-1.jpg" alt="gunung" />
+          <img className="hero__image" src="/backpacker-1.webp" alt="gunung" />
           <div className="hero__text">
             <h2>Pinjamkan gear naik gunung anda</h2>
             <p>Punya carrier atau tenda tidak terpakai? Sewakan di sini</p>
