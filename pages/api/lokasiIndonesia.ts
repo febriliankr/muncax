@@ -843,5 +843,5 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
           "Kab. Sorong"
        ]
     }
- }
+ })
 }
