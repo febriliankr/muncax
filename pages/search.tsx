@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-
+import Skeleton from "react-loading-skeleton";
 function Search() {
   const router = useRouter();
   console.log(router.query);
@@ -14,9 +14,28 @@ function Search() {
         </p>
         <div className="filter">Filter</div>
       </div>
+      <div className="searchresult__box">
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+        <Skeleton height={300} width={220} />
+      </div>
     </div>
   );
 }
 
 export default Search;
-

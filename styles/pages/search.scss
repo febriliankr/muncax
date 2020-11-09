@@ -22,4 +22,15 @@
       }
     }
   }
+  .searchresult__box{
+    margin: 50px auto 0;
+    width: 100%;
+    max-height: 200px;
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    .react-loading-skeleton{
+      margin: 10px;
+    }
+  }
 }
