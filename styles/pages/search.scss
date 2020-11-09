@@ -1,0 +1,25 @@
+.searchPage__container {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  height: 100vh;
+  @media screen and (max-width: $breakpoint-wide) {
+  }
+  .searchPage__queryInfo {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding: 10px 0 10px;
+    margin: 0 100px 0;
+    align-items: center;
+
+    .filter {
+      cursor: pointer;
+      background-color: #ecf2ff;
+      padding: 5px 15px;
+      border-radius: 5px;
+      &:hover{
+        background-color: #dae5fd;
+      }
+    }
+  }
+}

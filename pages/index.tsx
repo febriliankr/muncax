@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Search from "../components/Search";
-import SearchBar from "../components/SearchBar";
+import Footer from "../components/Footer";
+import Search from "../components/SearchBar";
 
 export default function Home() {
   return (
@@ -14,7 +14,6 @@ export default function Home() {
         <Search />
       </main>
       <div className="home__container">
-        
         <div className="hero">
           <div className="hero__text">
             <h2>Cari penyewa terdekat, termurah</h2>
@@ -31,6 +30,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,41 +1,33 @@
-import Select from "react-select";
-import Axios from "axios";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-
-function SearchBar() {
+import { AiOutlineSearch } from "react-icons/ai";
+function Search({}) {
   const router = useRouter();
-
-  const [search, setSearch] = useState("f");
-
+  const [currentSearch, setCurrentSearch] = useState(router.query.q);
+  const [search, setSearch] = useState(router.query?.q);
   function handleSubmit(e) {
-    // console.log(e.key);
-    if (e.key === "Enter") {
-      // router.push('/api/cities')
-      console.log(search);
-    }
+    e.preventDefault();
+    console.log(search);
+    //st => search type, q=> query
+    router.push(`/search?st=product&q=${search}`);
   }
-
-  function handleChange(text) {
-    console.log("CHANGE", text);
-  }
-
-  const options = [
-    { value: "Carrier", label: "Carrier" },
-    { value: "Tenda", label: "Tenda" },
-    { value: "Matras", label: "Matras" },
-    { value: "Lampu", label: "Lampu" },
-  ];
 
   return (
     <div className="searchbar__container">
-      <Select 
-        onKeyDown={handleSubmit}
-        options={options}
-        placeholder="🔍 Cari barang yang anda butuhkan..."
-      />
+      <form onSubmit={handleSubmit} className="search-form">
+        <input
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+          className="searchTerm"
+          placeholder="Cari barang yang anda butuhkan"
+          value={search}
+        />
+        <button type="submit" className="searchButton">
+          <AiOutlineSearch />
+        </button>
+      </form>
     </div>
   );
 }
 
-export default SearchBar;
+export default Search;
