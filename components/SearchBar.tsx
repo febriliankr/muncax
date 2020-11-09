@@ -14,7 +14,7 @@ function SearchBar() {
 
   return (
     <div className="searchbar__container">
-      <Select options={options} placeholder="Cari penyewa berdasarkan lokasi" />
+      <Select options={options} placeholder="Cari barang yang anda butuhkan..." />
     </div>
   );
 }
