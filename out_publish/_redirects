@@ -1,0 +1,3 @@
+# Next-on-Netlify Redirects
+/api/cities  /.netlify/functions/next_api_cities  200
+/*  /:splat  200
