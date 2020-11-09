@@ -13,7 +13,7 @@ function Navbar({}: Props): ReactElement {
     <div className="navbar__container">
       <div className="navbar__logo">
         <Link href="/">
-          <h1>Muncak App</h1>
+          <h1>Muncak App 🗻</h1>
         </Link>
       </div>
       {isAtHome ? null : <Search />}
