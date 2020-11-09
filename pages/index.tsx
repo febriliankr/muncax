@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Search from "../components/Search";
 import SearchBar from "../components/SearchBar";
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
       </Head>
       <main>
         <h1>Sewa peralatan naik gunung terdekat</h1>
-        <SearchBar />
+        <Search />
       </main>
       <div className="home__container">
+        
         <div className="hero">
           <div className="hero__text">
             <h2>Cari penyewa terdekat, termurah</h2>
