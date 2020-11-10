@@ -3,19 +3,16 @@ import { useRouter } from "next/router";
 import { AiOutlineSearch } from "react-icons/ai";
 function Search({}) {
   const router = useRouter();
-  const [currentSearch, setCurrentSearch] = useState(router.query.q);
   const [search, setSearch] = useState(router.query?.q);
   const [searchFocus, setSearchFocus] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
     console.log(search);
-    //st => search type, q=> query
     router.push(`/search?st=product&q=${search}`);
   }
 
   function handleClickSuggestion(e, query) {
     e.preventDefault();
-    // console.log('e,', e,)
     router.push(`/search?st=product&q=${query}`);
   }
 
@@ -55,7 +52,6 @@ function Search({}) {
               return (
                 <li
                   onMouseOver={() => setSearch(text)}
-                  // onClick={(e) => alert(e)}
                   key={index}
                 >
                   {text}

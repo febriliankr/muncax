@@ -33,3 +33,7 @@ Use media query for css for responsive design
 yarn
 yarn dev
 ```
+
+## Useful tutorial for building this project
+
+https://www.youtube.com/watch?v=PxiQDo0CmDE&t=773s
