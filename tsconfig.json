@@ -21,7 +21,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "libn/mysqldb.js"
+    "**/*.tsx", "libn/mysqldb.js", "server/index.js"
   ],
   "exclude": [
     "node_modules"

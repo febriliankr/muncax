@@ -1,6 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import { NextApiRequest, NextApiResponse } from "next";
+const { response } = require("express");
+const express = require("express");
+const mysql = require("mysql");
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
    const db = mysql.createConnection({

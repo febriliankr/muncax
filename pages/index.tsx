@@ -1,8 +1,22 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Search from "../components/SearchBar";
+import axos from "axios";
+import Axios from "axios";
 
 export default function Home() {
+  Axios.get('https://node-msql.herokuapp.com/getsellers')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
   return (
     <div>
       <Head>
