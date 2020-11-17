@@ -61,7 +61,7 @@ export default function PendaftaranUmum() {
               <p className="error-label">{errors.password?.message}</p>
 
               <div>
-                <button disabled={disableSubmit} onClick={handleSubmit}>
+                <button disabled={disableSubmit}>
                   Register
                 </button>
               </div>

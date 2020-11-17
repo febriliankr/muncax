@@ -36,3 +36,4 @@ yarn-error.log*
 #netlify publish folder
 out_publish
 out_functions
+.vercel

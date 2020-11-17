@@ -37,3 +37,7 @@ yarn dev
 ## Useful tutorial for building this project
 
 https://www.youtube.com/watch?v=PxiQDo0CmDE&t=773s
+
+
+INSERT INTO sellers ( nama_seller, tgllahir_seller, kota_seller, alamat_seller, nohp_seller, gender_seller, email_seller, username_seller, password_seller)
+  VALUES ("Kristiawan", "1999-01-01","Salatiga","Perumahan Kota Baru","0918232138","Male","febrilian@outlook.com","fb12","pasword1")

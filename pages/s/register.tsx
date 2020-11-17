@@ -28,19 +28,6 @@ export default function PendaftaranUmum() {
     console.log(formData);
     setDisableSubmit(true);
     const { name, email, instansi, whatsapp } = formData;
-
-    db.collectionGroup("users")
-      .where("email", "==", email)
-      .get()
-      .then((snapshot) => {
-        const existingEmail = snapshot.docs;
-        if (existingEmail.length) {
-          alert(`Alamat email ${email} telah terdaftar`);
-          setDisableSubmit(false);
-        } else {
-          checkAndAddToDatabase(name, email, instansi, whatsapp);
-        }
-      });
   };
 
   return (
@@ -55,7 +42,7 @@ export default function PendaftaranUmum() {
           <h1 className="register-text-heading">REGISTER NOW</h1>
           <p className="register-text">Pendaftaran Seller Muncax</p>
           <div className="input-areas">
-            <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
+            <form className="register-form" >
               <input
                 className={`register-input ${
                   errors.name ? "username-error" : null
@@ -94,7 +81,7 @@ export default function PendaftaranUmum() {
               <p className="error-label">{errors.whatsapp?.message}</p>
 
               <div className="pt-1">
-                <button disabled={disableSubmit} onClick={handleSubmit}>
+                <button disabled={disableSubmit}>
                   Register
                 </button>
               </div>

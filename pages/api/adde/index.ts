@@ -2,11 +2,9 @@ import { NextApiRequest, NextApiResponse } from "next";
 import db from "../../../config/database";
 
 module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
-  res.json({d: "hello"})
   if (req.method !== "POST") {
     res.status(500).json({ message: "This route is only for POST requests" });
   }
-  console.log('req.body', req.body)
   const {
     nama_seller,
     tgllahir_seller,
@@ -32,7 +30,9 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     username_seller,
     password_seller,
     (err, result) => {
-      if (err) throw err;
+      if (err) {
+        throw err;
+      }
       console.log(result);
       res.send({ result, message: "User has been sucessfully added!" });
     }
