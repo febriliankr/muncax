@@ -4,6 +4,17 @@ $breakpoint-tablet: 1000px;
 $breakpoint-wide: 1200px;
 $blue: rgb(0, 81, 255);
 
+$text-color: black;
+$text-link: #93b0ff;
+$text-muted: #424a5e;
+$text-light: #f1f1f1;
+$dcu-blue: #0c3e57;
+$dark: #163C4F;
+
+$nav-height: 80px;
+$nav-shrinked: 50px;
+
+
 // IMPORTS
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import "./pages/landing.scss";
@@ -11,6 +22,7 @@ $blue: rgb(0, 81, 255);
 @import "./components/navbar.scss";
 @import "./components/footer.scss";
 @import "./components/searchbar.scss";
+@import "./components/forms.scss";
 
 // GLOBAL STYLES
 html,

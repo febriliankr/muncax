@@ -5,7 +5,7 @@ import axos from "axios";
 import Axios from "axios";
 
 export default function Home() {
-  Axios.get('https://node-msql.herokuapp.com/getsellers')
+  Axios.get('/api/sellers')
   .then(function (response) {
     // handle success
     console.log(response);

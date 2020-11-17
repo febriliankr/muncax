@@ -8,7 +8,7 @@ interface Props {}
 function Navbar({}: Props): ReactElement {
   const router = useRouter();
   const isAtHome = router.route === "/";
-  console.log("router", isAtHome);
+  // console.log("router", isAtHome);
   return (
     <div className="navbar__container">
       <div className="navbar__logo">
@@ -18,7 +18,7 @@ function Navbar({}: Props): ReactElement {
       </div>
       {isAtHome ? null : <Search />}
       <div className="navbar__links">
-        <Link href="https://instagram.com">Instagram</Link>
+        <Link href="/s/register">Register as Seller</Link>
       </div>
     </div>
   );
