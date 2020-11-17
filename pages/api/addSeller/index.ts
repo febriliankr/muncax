@@ -2,11 +2,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 import db from "../../../config/database";
 
 module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
-  res.json({d: "hello"})
   if (req.method !== "POST") {
     res.status(500).json({ message: "This route is only for POST requests" });
+    return;
   }
-  console.log('req.body', req.body)
   const {
     nama_seller,
     tgllahir_seller,
@@ -18,23 +17,19 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     username_seller,
     password_seller,
   } = req.body;
-  const sql = `INSERT INTO sellers ( nama_seller, tgllahir_seller, kota_seller, alamat_seller, nohp_seller, gender_seller, email_seller, username_seller, password_seller)
-  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+  const sql = `INSERT INTO sellers (nama_seller, tgllahir_seller, kota_seller, alamat_seller, nohp_seller, gender_seller, email_seller, username_seller, password_seller) VALUES ("${nama_seller}", "${tgllahir_seller}", "${kota_seller}", "${alamat_seller}", "${nohp_seller}", "${gender_seller}", "${email_seller}", "${username_seller}", "${password_seller}")`;
   const query = await db.query(
-    sql,
-    nama_seller,
-    tgllahir_seller,
-    kota_seller,
-    alamat_seller,
-    nohp_seller,
-    gender_seller,
-    email_seller,
-    username_seller,
-    password_seller,
-    (err, result) => {
-      if (err) throw err;
+    sql, (err, result) => {
+      if (err) {
+        throw err;
+      }
       console.log(result);
-      res.send({ result, message: "User has been sucessfully added!" });
+      res.send({
+        result,
+        message: "User has been sucessfully added!",
+        id: result.insertId,
+      });
     }
   );
 };
