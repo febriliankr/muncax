@@ -15,6 +15,9 @@ Demo is moved to Vercel. vercel.muncax.app
 [x] updateSeller (POST send one line json with property and value)
 [x] deleteSeller/:id (GET request the :id)
 
+### Frontend todo List
+
+[ ] Dashboard for Seller
 ### Images are still not Optimized 🖼
 
 Convert to webp format or optimize with lazy loading
