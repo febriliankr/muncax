@@ -8,16 +8,16 @@ Demo is moved to Vercel. vercel.muncax.app
 
 ### REST API To Do List
 
-[x] addSeller (POST send full json)
-[x] getSellers
-[x] getSellers/:id
-[x] sellerAuth (POST send username and password)
-[x] updateSeller (POST send one line json with property and value)
-[x] deleteSeller/:id (GET request the :id)
+- [x] addSeller (POST send full json)
+- [x] getSellers
+- [x] getSellers/:id
+- [x] sellerAuth (POST send username and password)
+- [x] updateSeller (POST send one line json with property and value)
+- [x] deleteSeller/:id (GET request the :id)
 
 ### Frontend todo List
 
-[ ] Dashboard for Seller
+- [ ] Dashboard for Seller
 ### Images are still not Optimized 🖼
 
 Convert to webp format or optimize with lazy loading
