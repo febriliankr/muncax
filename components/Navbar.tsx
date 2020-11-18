@@ -18,7 +18,7 @@ function Navbar({}: Props): ReactElement {
       </div>
       {isAtHome ? null : <Search />}
       <div className="navbar__links">
-        <Link href="/s/register">Register as Seller</Link>
+        <Link href="/s/login">Login as Seller</Link>
       </div>
     </div>
   );

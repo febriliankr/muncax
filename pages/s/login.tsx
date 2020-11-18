@@ -5,10 +5,12 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
+import responsiveObserve from "antd/lib/_util/responsiveObserve";
 
 const Schema = yup.object().shape({
   username: yup.string().required(),
-  password: yup.string().required()
+  password: yup.string().required(),
 });
 
 export default function PendaftaranUmum() {
@@ -18,14 +20,22 @@ export default function PendaftaranUmum() {
     resolver: yupResolver(Schema),
   });
 
-  function checkAndAddToDatabase(username, password) {
-    console.log(username, password);
-  }
+  const loginSeller = async (data) => {
+    const request = await axios({
+      method: "post",
+      baseURL: "/api/sellerAuth",
+      data,
+    });
+
+    const response = request.data;
+    console.log(response);
+    return response;
+  };
 
   const onSubmit = (formData) => {
     console.log(formData);
     setDisableSubmit(true);
-    const {username, password} = formData;
+    loginSeller(formData);
   };
 
   return (
@@ -61,13 +71,12 @@ export default function PendaftaranUmum() {
               <p className="error-label">{errors.password?.message}</p>
 
               <div>
-                <button disabled={disableSubmit}>
-                  Register
+                <button disabled={disableSubmit} onSubmit={handleSubmit}>
+                  Login
                 </button>
               </div>
             </form>
           </div>
-
         </div>
       </div>
     </>
