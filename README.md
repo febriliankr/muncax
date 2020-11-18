@@ -1,10 +1,19 @@
 # Muncax 🗻
 
-Typescript, NextJS, Bootstrap deployed in Netlify
+Typescript, NextJS, Bootstrap deployed in Vercel
 
-muncax.netlify.com
+Demo is moved to Vercel. vercel.muncax.app
 
 ## To Be Worked On ⚒
+
+### REST API To Do List
+
+[x] addSeller (POST send full json)
+[x] getSellers
+[x] getSellers/:id
+[x] sellerAuth (POST send username and password)
+[x] updateSeller (POST send one line json with property and value)
+[x] deleteSeller/:id (GET request the :id)
 
 ### Images are still not Optimized 🖼
 
@@ -24,8 +33,8 @@ Use media query for css for responsive design
 - Library: React.js v17.0.1
 - Framework: Next.js
 - Styling: [Sass](https://sass-lang.com/) --dev
-- Netlify Config: next-on-netlify
 - Search Bar: [react-select](https://react-select.com)
+- Serverless Functions: serverless-mysql
 
 ## Starting Server
 
